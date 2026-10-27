@@ -6,6 +6,7 @@ on:
     paths:
       - '.github/workflows/apk.yml'
       - 'launcher/**'
+      - '.signing/**'
 jobs:
   apk:
     runs-on: ubuntu-latest
@@ -18,6 +19,8 @@ jobs:
       - uses: android-actions/setup-android@v3
         with:
           packages: platforms;android-34 build-tools;34.0.0
+      - name: Use the fixed signing key, so updates install over the old version
+        run: mkdir -p ~/.android && cp .signing/debug.keystore ~/.android/debug.keystore
       - name: Build
         working-directory: launcher
         run: |
