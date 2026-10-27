@@ -287,6 +287,23 @@
                             android:letterSpacing="0.14"
                             android:textAllCaps="true"
                             android:visibility="gone" />
+
+                        <!-- Weather now ("+7° · Cloudy · Moscow") from the weather add-on; gone without it. -->
+                        <TextView
+                            android:id="@+id/weatherLine"
+                            android:gravity="left"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:singleLine="true"
+                            android:ellipsize="end"
+                            android:textColor="#E6FFFFFF"
+                            android:textSize="14sp"
+                            android:fontFamily="@string/font_medium"
+                            android:letterSpacing="0.14"
+                            android:textAllCaps="true"
+                            android:focusable="false"
+                            android:visibility="gone" />
                     </LinearLayout>
                 </LinearLayout>
 

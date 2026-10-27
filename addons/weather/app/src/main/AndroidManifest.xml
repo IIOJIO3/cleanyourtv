@@ -30,5 +30,10 @@
             </intent-filter>
             <meta-data android:name="com.gathin.tvhome.card" android:resource="@xml/module_card" />
         </activity>
+        <!-- The weather now for the Clean Your TV launcher's line under the date: read-only, one row. -->
+        <provider
+            android:name=".NowProvider"
+            android:authorities="io.github.sumyabazar1.weather.now"
+            android:exported="true" />
     </application>
 </manifest>
